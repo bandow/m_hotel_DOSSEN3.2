@@ -1,0 +1,448 @@
+@charset "UTF-8";
+/* =================================================================
+* Reset Style for Mobile
+* Author:雪丘行||Bandow
+* Author URI:http://www.unll123.com/
+* Date:2017-09-08
+* Version:0.0.2
+* ================================================================== */
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC","Helvetica Neue",STHeiti,"Microsoft Yahei",Tahoma,Simsun,sans-serif;
+  /*-webkit-text-size-adjust是解决 iPhone 横屏时默认会放大文字的问题*/
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  /*取消掉300ms的延迟，chrome和safari可以生效*/
+  touch-action: manipulation;
+}
+
+html, body {
+  /*-webkit-user-select:none禁止用户进行复制.选择.*/
+  -webkit-user-select: none;
+  user-select: none;
+  width: 100%;
+  /*使用min-height:100%代替height：100%*/
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  /*弹性滚动-局部滚动开启弹性滚动：将属性挂在body上，可以避免很多奇怪的bug。*/
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, div, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  /*把所有元素的内边距和边框不再会增加它的宽度*/
+  -moz-box-sizing: border-box;
+  /* Firefox */
+  -webkit-box-sizing: border-box;
+  /* Safari */
+  box-sizing: border-box;
+}
+
+ol, ul {
+  /*去掉列表点*/
+  list-style: none;
+}
+
+table {
+  /*去掉表格的双行线*/
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*取消a标签在移动端点击时的背景颜色*/
+a, a:hover, a:active, a:visited, a:link, a:focus {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  background: none;
+  text-decoration: none;
+}
+
+a, img {
+  /* 禁止长按链接与图片弹出菜单 */
+  -webkit-touch-callout: none;
+}
+
+input {
+  /*ios去除input默认样式*/
+  -webkit-appearance: none;
+}
+
+html {
+  font-size: 18px;
+}
+
+@media (min-device-width: 320px) {
+  html {
+    font-size: 18px;
+  }
+}
+@media (min-device-width: 360px) {
+  html {
+    font-size: 20.25px;
+  }
+}
+@media (min-device-width: 375px) {
+  html {
+    font-size: 21.1px;
+  }
+}
+@media (min-device-width: 384px) {
+  html {
+    font-size: 21.6px;
+  }
+}
+@media (min-device-width: 400px) {
+  html {
+    font-size: 22.5px;
+  }
+}
+@media (min-device-width: 412px) {
+  html {
+    font-size: 23.17px;
+  }
+}
+@media (min-device-width: 414px) {
+  html {
+    font-size: 23.3px;
+  }
+}
+@media (min-device-width: 480px) {
+  html {
+    font-size: 26.99px;
+  }
+}
+@media (min-device-width: 533px) {
+  html {
+    font-size: 29.98px;
+  }
+}
+@media (min-device-width: 568px) {
+  html {
+    font-size: 31.95px;
+  }
+}
+@media (min-device-width: 600px) {
+  html {
+    font-size: 33.74px;
+  }
+}
+@media (min-device-width: 640px) {
+  html {
+    font-size: 24px;
+  }
+}
+.wrapper {
+  width: 100%;
+  max-width: 640px;
+  min-height: 100%;
+  height: auto;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #f7f7f7;
+}
+
+.dossen-header-left {
+  position: relative;
+}
+.dossen-header-left:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 3px;
+  width: 10px;
+  height: 10px;
+  border: 1px solid;
+  border-bottom: 0;
+  border-right: 0;
+  margin-top: -5px;
+  color: #333;
+  -webkit-transform: rotateZ(-45deg);
+  transform: rotateZ(-45deg);
+}
+
+.dossen-arrow-bottom {
+  position: relative;
+}
+.dossen-arrow-bottom:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 3px;
+  width: 10px;
+  height: 10px;
+  border: 1px solid;
+  border-bottom: 0;
+  border-right: 0;
+  margin-top: -5px;
+  color: #333;
+  -webkit-transform: rotateZ(-135deg);
+  transform: rotateZ(-135deg);
+}
+
+.dossen-arrow {
+  position: relative;
+}
+.dossen-arrow:after {
+  content: ' ';
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  width: 8px;
+  height: 8px;
+  border: 1px solid;
+  border-bottom: 0;
+  border-right: 0;
+  margin-top: -4px;
+  color: #ccc;
+  -webkit-transform: rotateZ(135deg);
+  transform: rotateZ(135deg);
+}
+
+.dossen-pr {
+  padding-right: 5%;
+}
+
+/* =================================================================
+* Reset Style for Mobile
+* Author:雪丘行||Bandow
+* Author URI:http://www.unll123.com/
+* Date:2017-09-08
+* Version:0.0.2
+* ================================================================== */
+.wrapper {
+  width: 100%;
+  max-width: 640px;
+  min-height: 100%;
+  height: auto;
+  padding-top: 44px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.login-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 640px;
+  height: 44px;
+  background-color: #fff;
+  box-shadow: 1px 3px 5px #eee;
+  padding: 0 3%;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.login-header .left {
+  width: 10%;
+}
+.login-header h1 {
+  width: 80%;
+  font: 0.8rem/44px -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+  color: #333;
+  text-align: center;
+}
+.login-header .right {
+  width: 10%;
+}
+.login-header .right a {
+  display: block;
+  font: 0.7rem/44px -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+  color: #333;
+  text-align: right;
+}
+
+.login-content {
+  padding: 20% 10% 0 10%;
+}
+.login-content .item {
+  margin-bottom: 5%;
+}
+.login-content .item p {
+  font: 0.6rem/1.5 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+  color: #000;
+}
+.login-content .item .inp {
+  padding: 2% 0;
+  border-bottom: 1px solid #999;
+}
+.login-content .item .inp input {
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  font: 0.85rem/1.5 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+  color: #333;
+}
+.login-content .item .inp input::-webkit-input-placeholder {
+  font: 0.85rem/1.5 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+  color: #ddd;
+}
+.login-content .slider-box {
+  position: relative;
+  margin: 8% auto;
+  display: none;
+  width: 100%;
+  height: 44px;
+  background-color: #f5f5f5;
+  border-radius: 30px;
+  overflow: hidden;
+}
+.login-content .slider-box .slider-btn {
+  position: relative;
+  z-index: 3;
+  margin-top: 1px;
+  margin-left: 1px;
+  width: 42px;
+  height: 42px;
+}
+.login-content .slider-box .slider-btn .btn-moddle {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 30px;
+  box-shadow: 1px 2px 3px #ddd;
+  -moz-transition: all 0s;
+  -o-transition: all 0s;
+  -ms-transition: all 0s;
+  -webkit-transition: all 0s;
+  transition: all 0s;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+}
+.login-content .slider-box .slider-btn .btn-moddle em {
+  margin: 0 2px;
+  width: 3px;
+  height: 20px;
+  background-color: #e5e5e5;
+}
+.login-content .slider-box .slider-btn .btn-moddle-active {
+  width: 42px;
+  height: 42px;
+  background: -webkit-linear-gradient(40deg, #38cef9, #1addfc);
+  /* Safari 5.1 - 6.0 */
+  background: linear-gradient(40deg, #38cef9, #1addfc);
+  /* 标准的语法 */
+  border-radius: 30px;
+  box-shadow: 1px 2px 3px #ddd;
+  -moz-transition: all 0s;
+  -o-transition: all 0s;
+  -ms-transition: all 0s;
+  -webkit-transition: all 0s;
+  transition: all 0s;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+  display: none;
+}
+.login-content .slider-box .slider-btn .btn-moddle-active:before {
+  margin-top: -6px;
+  content: "";
+  width: 18px;
+  height: 8px;
+  border: 2px solid;
+  border-color: transparent transparent #fff #fff;
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.login-content .slider-box .slider-bg {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #e3f2fd;
+  -moz-transition: all 0s;
+  -o-transition: all 0s;
+  -ms-transition: all 0s;
+  -webkit-transition: all 0s;
+  transition: all 0s;
+}
+.login-content .slider-box .slider-bg p {
+  display: none;
+  text-align: center;
+  font: 0.7rem/44px -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+  color: #7ec8fe;
+}
+.login-content .slider-box > p {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+  font: 0.7rem/44px -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+  color: #999;
+}
+.login-content .btn {
+  display: block;
+  text-decoration: none;
+  background-color: #ff6b9d;
+  border-radius: 30px;
+  margin: 10% 0 5%;
+  width: 100%;
+  font: 0.65rem/40px -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+  color: #ffbbd2;
+  text-align: center;
+}
+.login-content .btn.on {
+  background-color: #d91e66;
+  color: #fff;
+}
+.login-content > p {
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  justify-content: space-between;
+}
+.login-content > p a {
+  font: 0.6rem/1.5 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+  color: #666;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=login.css.map */
