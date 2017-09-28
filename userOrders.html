@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html id="html" lang="zh-cn">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="description" content="不超过150个字符"/>
+<meta name="keywords" content="不超过80个字符"/>
+<meta name="author" content="name, sycbbb@sina.com"/>
+<meta name="robots" content="index,follow"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="format-detection" content="telephone=no, email=no,adress=no"/>
+<meta name="msapplication-tap-highlight" content="no">
+<title>我的订单</title>
+<link rel="stylesheet" href="styles/userOrders.css">
+</head>
+<body>
+<div class="wrapper user-orders-wrapper">
+	<header class="header user-orders-header" style="background:url(images/user_orders_header_bg.jpg) no-repeat; background-size:100% auto;">
+		<div class="top">
+			<a class="left dossen-header-left" href="javascript:history.go(-1);"></a>
+			<h1>我的订单</h1>
+		</div>
+		<div class="orders-status">
+			<ul>
+				<li class="active">全部</li>
+				<li>待入住</li>
+				<li>待付款</li>
+				<li>待评价</li>
+			</ul>
+			<div class="line"></div>
+		</div>
+	</header>
+	<div class="user-orders-content">
+		<div class="items">
+			<div class="items-top">
+				<h2>宜尚酒店广州客村地铁站琶洲宜尚酒店广州客村地铁站琶洲</h2>
+				<span>待付款</span>
+			</div>
+			<p>时间：09-11至09-12<span>住1晚/2间</span></p>
+			<p>房型：商务大床房</p>
+			<div class="items-foot">
+				<span>￥<strong>462</strong></span>
+				<a class="active" href="javascript:;">去支付</a>
+			</div>
+		</div>
+		<div class="items">
+			<div class="items-top">
+				<h2>宜尚酒店广州客村地铁站琶洲宜尚酒店广州客村地铁站琶洲</h2>
+				<span>待付款</span>
+			</div>
+			<p>时间：09-11至09-12<span>住1晚/2间</span></p>
+			<p>房型：商务大床房</p>
+			<div class="items-foot">
+				<span>￥<strong>462</strong></span>
+				<a class="active" href="javascript:;">去支付</a>
+			</div>
+		</div>
+		<div class="items">
+			<div class="items-top">
+				<h2>宜尚酒店广州客村地铁站琶洲宜尚酒店广州客村地铁站琶洲</h2>
+				<span>待付款</span>
+			</div>
+			<p>时间：09-11至09-12<span>住1晚/2间</span></p>
+			<p>房型：商务大床房</p>
+			<div class="items-foot">
+				<span>￥<strong>462</strong></span>
+				<a class="active" href="javascript:;">去支付</a>
+			</div>
+		</div>
+		<div class="items">
+			<div class="items-top">
+				<h2>宜尚酒店广州客村地铁站琶洲宜尚酒店广州客村地铁站琶洲</h2>
+				<span>待付款</span>
+			</div>
+			<p>时间：09-11至09-12<span>住1晚/2间</span></p>
+			<p>房型：商务大床房</p>
+			<div class="items-foot">
+				<span>￥<strong>462</strong></span>
+				<a class="active" href="javascript:;">去支付</a>
+			</div>
+		</div>
+		<div class="items">
+			<div class="items-top">
+				<h2>宜尚酒店广州客村地铁站琶洲宜尚酒店广州客村地铁站琶洲</h2>
+				<span>待付款</span>
+			</div>
+			<p>时间：09-11至09-12<span>住1晚/2间</span></p>
+			<p>房型：商务大床房</p>
+			<div class="items-foot">
+				<span>￥<strong>462</strong></span>
+				<a class="active" href="javascript:;">去支付</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- script begin -->
+<script src="scripts/jquery-3.1.1.min.js"></script>
+<script>
+$(document).ready(function($){
+	var haderHeight=$(".user-orders-header").height()+10;
+	$(".user-orders-wrapper").css("paddingTop",haderHeight);
+	//状态列表切换
+	$(".orders-status ul li").each(function(index,el){
+		$(this).on("click",function(){
+			$(this).addClass('active').siblings().removeClass('active');
+			console.log(index);
+			$(".line").css("left",5+25*index+"%");
+		});
+	});
+	$.ajax({
+		url:'http://10.44.61.27/m_hotel_DOSSEN3.2/data/Hotel.json',
+		type:'GET',
+		dataType:'json',
+		data:{},
+		success:function(result){
+			var hotelText=$(".hotel-text");
+			var hotelContent='';
+			var hotelInfo=result.data.Orders[0];
+			var time=new Date(hotelInfo.CheckOutDate).getTime()-new Date(hotelInfo.CheckInDate).getTime();
+			var day= time/ 1000 / 60 / 60 / 24;
+			//console.log(hotelInfo);
+			if(result.data.Orders != null && result.data.Orders.length > 0){
+				hotelContent+='<p>酒店名称：<span>'+hotelInfo.Hotel.Name+'</span></p>';
+				hotelContent+='<p>入住时间：<span>'+hotelInfo.CheckInDate.replace(/00:00:00/, "")+'</span></p>';
+				hotelContent+='<p>离店时间：<span>'+hotelInfo.CheckOutDate.replace(/00:00:00/, "")+'</span><span>住'+day+'晚</span></p>';
+			}
+			hotelText.append(hotelContent);
+		},
+		error:function(){
+			console.log('error');
+		}
+	})
+});
+</script>
+<!-- script end -->
+</body>
+</html>
+
+

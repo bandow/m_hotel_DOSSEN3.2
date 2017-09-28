@@ -1,0 +1,217 @@
+@import "base","variable","common";
+.orders-detail-wrapper{
+	background-color:#f7f7f7;
+	padding-bottom:44px;
+}
+.orders-detail-header{
+	padding:0 3%;
+	margin:0 auto;
+	width:100%;
+	height:auto;
+	.top{
+		height:44px;
+		@include display(flex);
+	 	@include align-items(center);
+	 	.left{
+	 		width:10%;
+	 	}
+	 	h1{
+	 		width:80%;
+	 		font:.8rem/40px $publicFont;
+	 		color:#333;
+	 		text-align:center;
+	 	}
+	}
+	.orders-detail-text{
+		padding:3% 1% 10% 1%;
+		h2{
+			@include display(flex);
+	 		@include align-items(center);
+	 		i{
+	 			margin-right:.5rem;
+				width:30px;
+				height:30px;
+				font-size:0;
+				img{
+					width:100%;
+					height:100%;
+				}
+	 		}
+	 		span{
+	 			font:bold 1rem/1.5 $publicFont;
+	 			color:#da004c;
+	 		}
+		}
+		p{
+			font:.75rem/2 $publicFont;
+ 			color:#333;
+		}
+	}
+}
+.orders-detail-content{
+	.content-top{
+		padding:3% 3% 0 3%;
+		background-color:#fff;
+		.text{
+			padding-bottom:3%;
+			border-bottom:1px solid #eee;
+			h3{
+				font:.8rem/1.5 $publicFont;
+	 			color:#333;
+			}
+			p{
+				@include display(flex);
+	 			@include align-items(center);
+	 			i{
+	 				margin-right:.4rem;
+	 				width:14px;
+	 				height:auto;
+	 				font-size:0;
+	 				img{
+	 					width:100%;
+	 				}
+	 			}
+	 			span{
+	 				font:.7rem/1.5 $publicFont;
+	 				color:#999;
+	 			}
+			}
+		}
+		.text.dossen-arrow:after{
+			right:1%;
+		}
+		.list{
+			padding:5% 0;
+			@include display(flex);
+ 			@include align-items(center);
+ 			@include justify-content(center);
+ 			a{
+ 				@include box-flex(1);
+ 				@include display(flex);
+ 				@include align-items(center);
+ 				@include justify-content(center);
+ 				i{
+ 					margin-right:.3rem;
+					width:20px;
+					height:auto;
+					font-size:0;
+					img{
+						width:100%;
+					}
+ 				}
+ 				span{
+ 					font:.7rem/1.5 $publicFont;
+	 				color:#666;
+ 				}
+ 			}
+		}
+	}
+	.content-detail{
+		margin-top:.5rem;
+		padding:3%;
+		background-color:#fff;
+		p{
+			@include display(flex);
+			@include align-items(center);
+			span{
+				font:.7rem/2 $publicFont;
+ 				color:#666;
+ 				&:first-child{
+ 					color:#999;
+ 					width:5rem;
+ 				}
+ 				&:last-child{
+ 					color:#666;
+ 					span{
+ 						margin-left:.3rem;
+ 					}
+ 				}
+			}
+			.w2{
+				letter-spacing:1.4rem; 
+			}
+			.w3{
+				letter-spacing:.35rem;
+			}
+		}
+	}
+	.hotel-service{
+		margin-top:.5rem;
+		padding:3% 3% 0 3%;
+		background-color:#fff;
+		h2{
+			padding-bottom:3%;
+			font:.8rem/2 $publicFont;
+			color:#000;
+		}
+		.items{
+			@include display(flex);
+			// @include align-items(center);
+			border-top:1px solid #eee;
+			padding:5% 0;
+			.img{
+				margin-right:.5rem;
+				width:20px;
+				font-size:0;
+				img{
+					width:100%;
+				}
+			}
+			.text{
+				h3{
+					font:.8rem/1.2 $publicFont;
+					color:#333;
+				}
+				p{
+					font:.7rem/2 $publicFont;
+					color:#999;
+				}
+			}
+		}
+		.items.dossen-arrow:after{
+			right:1%;
+		}
+	}
+	.content-orders{
+		@extend .content-detail;
+	}
+	.content-prompt{
+		margin-top:.5rem;
+		padding:3%;
+		p{
+			font:.7rem/1.5 $publicFont;
+			color:#999;
+		}
+	}
+}
+.orders-detail-footer{
+	position:fixed;
+	left:0;
+	bottom:0;
+	right:0;
+	z-index:3;
+	padding:0 3%;
+	margin:0 auto;
+	width:100%;
+	max-width:640px;
+	height:44px;
+ 	@include display(flex);
+ 	@include align-items(center);
+ 	box-shadow:0px -5px 10px #ececec;
+ 	background-color:#fff;
+ 	a{
+ 		margin:0 3%;
+ 		@include box-flex(1);
+ 		font:.7rem/2.2 $publicFont;
+ 		border-radius:30px;
+ 		text-align:center;
+ 	}
+ 	.see{
+		color:#d91d65;
+		border:1px solid #d91d65;
+ 	}
+ 	.book{
+		color:#fff;
+		background-color:#d91d65;
+ 	}
+}

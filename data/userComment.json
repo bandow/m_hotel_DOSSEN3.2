@@ -1,0 +1,100 @@
+{
+  "requestid": "33427f2bf312468fb6ff7479022f205c",
+  "errcode": 0,
+  "errmsg": "ok",
+  "data": {
+    "Comments": [
+      {
+        "CommentId": 10581,
+        "HotelId": "0000126",
+        "OrderId": "R0000126170921000003",
+        "MemberNo": "f6b49e15-b1d5-4713-a87b-87d1a08bfec8",
+        "Author": "东呈会员",
+        "Status": 1,
+        "Recommend": 0,
+        "CreateTime": "2017-12-01 19:07:39",
+        "Content": "服务态度很赞，早餐品类丰富!最主要是离汽车站又近，性价比很高，赞赞赞！！！",
+        "Sleep": 5,
+        "Service": 0,
+        "Shower": 0,
+        "Health": 5,
+        "Grade": "3",
+        "Influence": "",
+        "Ip": "",
+        "Reply": "尊敬的客人:您好！感谢您入住城市便捷酒店广州白云新市店，感谢您在百忙中拨冗对我们酒店进行点评。您的肯定对我们而言是莫大的动力及鼓舞，城市便捷有独创的”3B3S“服务模式，为广大客人提供更好地服务，更能为您提供满意的服务。期待您下次光临，祝您生活愉快！",
+        "ReplyTime": null,
+        "ChannelId": null,
+        "ModifiedTime": null,
+        "ModifiedNum": 0,
+        "ModifiedStatus": 0,
+        "Pictures": [
+            {
+                "IsMain": true,
+                "Type": "WG",
+                "PictureUrl": "images/comment1.jpg",
+                "ThumbnailUrl": "images/comment1.jpg"
+            },
+            {
+                "IsMain": true,
+                "Type": "其他",
+                "PictureUrl": "images/comment2.jpg",
+                "ThumbnailUrl": "images/comment2.jpg"
+            },
+            {
+                "IsMain": true,
+                "Type": "其他",
+                "PictureUrl": "images/comment3.jpg",
+                "ThumbnailUrl": "images/comment3.jpg"
+            },
+            {
+                "IsMain": true,
+                "Type": "其他",
+                "PictureUrl": "images/comment4.jpg",
+                "ThumbnailUrl": "images/comment4.jpg"
+            }
+            ,
+            {
+                "IsMain": true,
+                "Type": "其他",
+                "PictureUrl": "images/comment4.jpg",
+                "ThumbnailUrl": "images/comment4.jpg"
+            }
+        ],
+        "Tags": [
+            {
+                "TagId": "00000030",
+                "TagType": "NEGATIVE",
+                "Banner": "非常不满意，各方面都很差",
+                "TagContent": "门窗隔音效果不好",
+                "MaxRank": 1.0,
+                "MinRank": 0.1
+            }, {
+                "TagId": "00000032",
+                "TagType": "NEGATIVE",
+                "Banner": "非常不满意，各方面都很差",
+                "TagContent": "酒店位置不好找",
+                "MaxRank": 1.0,
+                "MinRank": 0.1
+            }, {
+                "TagId": "00000034",
+                "TagType": "NEGATIVE",
+                "Banner": "非常不满意，各方面都很差",
+                "TagContent": "早餐种类少",
+                "MaxRank": 1.0,
+                "MinRank": 0.1
+            }
+        ],
+        "MemberAvatar": null,
+        "Starts": 4
+      }
+    ],
+    "Page": 0,
+    "Rows": 0,
+    "Pagination": false,
+    "Total": 0,
+    "ApiUser": null,
+    "ApiChannel": null,
+    "Version": null,
+    "Extensions": null
+  }
+}

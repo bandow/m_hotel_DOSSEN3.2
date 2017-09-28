@@ -1,0 +1,144 @@
+{
+  "requestid": "e22427fe9a424a39a349830de7f6e8df",
+  "errcode": 0,
+  "errmsg": "ok",
+  "data": {
+    "Orders": [
+      {
+        "OrderId": "R0000126170922000001",
+        "HotelId": "0000126",
+        "Hotel": {
+          "HotelId": "0000126",
+          "Name": "小花铂顿酒店",
+          "CityCode": "22",
+          "CityName": null,
+          "Telephone": "020-1234568",
+          "Address": "白云机场",
+          "MapPoints": [
+            {
+              "MapType": "T",
+              "Longitude": "113.309400",
+              "Latitude": "23.390320"
+            },
+            {
+              "MapType": "B",
+              "Longitude": "113.309493",
+              "Latitude": "23.392435"
+            }
+          ],
+          "LowestPrice": 185.0,
+          "Status": "OPEN",
+          "SatisfyRate": "1",
+          "Grade": {
+            "Rate": 0.0,
+            "Desc": ""
+          },
+          "WifiPwd": "bd",
+          "BrandCode": "bd",
+          "CommentNum": 1,
+          "BusinessArea": "",
+          "RankPoint": 0,
+          "BreakFast": true,
+          "FreeWifi": true,
+          "Packing": true,
+          "Description": "",
+          "Pictures": [
+            {
+              "IsMain": true,
+              "Type": "WG",
+              "PictureUrl": "/image/Hotel/5fe93d614f724f9183a2f23e3518e6fd_mid.png",
+              "ThumbnailUrl": "/image/Hotel/5fe93d614f724f9183a2f23e3518e6fd_mid.png"
+            },
+            {
+              "IsMain": true,
+              "Type": "其他",
+              "PictureUrl": "/image/Hotel/6c60939b4405411199dd5db626845973_big.png",
+              "ThumbnailUrl": "/image/Hotel/6c60939b4405411199dd5db626845973_big.png"
+            },
+            {
+              "IsMain": true,
+              "Type": "其他",
+              "PictureUrl": "/image/Hotel/c06b117182dd411791f29164ae413ab0_big.png",
+              "ThumbnailUrl": "/image/Hotel/c06b117182dd411791f29164ae413ab0_big.png"
+            },
+            {
+              "IsMain": true,
+              "Type": "其他",
+              "PictureUrl": "/image/Hotel/deb82bd4317544ffbacdd63eff57d885_big.png",
+              "ThumbnailUrl": "/image/Hotel/deb82bd4317544ffbacdd63eff57d885_big.png"
+            },
+            {
+              "IsMain": true,
+              "Type": "其他",
+              "PictureUrl": "/image/Hotel/3865297fd8de488690b5bf17953e442d_big.png",
+              "ThumbnailUrl": "/image/Hotel/3865297fd8de488690b5bf17953e442d_big.png"
+            },
+            {
+              "IsMain": true,
+              "Type": "其他",
+              "PictureUrl": "/image/Hotel/d8348ad8f03d4fcd801805c39e17fd1a_big.png",
+              "ThumbnailUrl": "/image/Hotel/d8348ad8f03d4fcd801805c39e17fd1a_big.png"
+            }
+          ],
+          "HotelFacilities": null,
+          "RoomFacilities": null,
+          "HotelTraffics": null,
+          "HotelPolicy": null,
+          "Memo": "大堂电脑|复印传真|休闲书吧|免费WIFI|自助咖啡机|停车场|自助洗衣房|自助营养早餐厅|支持刷卡|内有电梯",
+          "Distance": 0.0,
+          "HotelRoomTypes": null,
+          "Tags": [
+            {
+              "Key": "新店特惠",
+              "Value": null,
+              "Tips": null,
+              "Class": "LABEL_CYAN",
+              "HoverIcon": null,
+              "Icon": null,
+              "IsNew": false,
+              "Desc": null,
+              "Url": null
+            }
+          ],
+          "IsFavorite": false,
+          "IsInvoice": true,
+          "QualityScore": 0.0
+        },
+        "RoomTypeId": "BD",
+        "RoomTypeName": "标准大床房",
+        "RoomTypePic": "http://211.97.0.116:8079/StaticFile/image/Hotel/a25822da46204c66baf60d3e7647d5a2_small.jpg",
+        "CheckInType": "NS",
+        "CheckInDate": "2017-09-22 00:00:00",
+        "CheckOutDate": "2017-09-30 00:00:00",
+        "numDay": 1,
+        "CRSorOther": "71",
+        "BookType": null,
+        "Status": "NOSHOW",
+        "BookingNum": 1,
+        "TotalFee": 220.00,
+        "Coupon": 50.0,
+        "IsPay": false,
+        "PayTime": null,
+        "CreateTime": "2017-09-22 16:06:19",
+        "ModifyTime": "2017-09-22 16:06:19",
+        "ActivityCode": "",
+        "ExchangePoint": "",
+        "GuestName": "陈",
+        "Telephone": "15015718371",
+        "MemberNo": "201709014691",
+        "KeepTime": "2017-09-22 18:00:00",
+        "Events": null,
+        "Tags": null,
+        "CurrentTime": "2017-09-27 10:55:27",
+        "Invoice": null,
+        "CanModifyInvoice": null,
+        "NeedPrepay": null,
+        "RoomNO": null
+      }
+    ],
+    "Page": 0,
+    "Rows": 0,
+    "Total": 1,
+    "Extendsions": null
+  }
+}

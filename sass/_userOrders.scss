@@ -1,0 +1,125 @@
+@import "base","variable","common";
+.user-orders-wrapper{
+	padding-top:44px;
+	background-color:#f7f7f7;
+}
+.user-orders-header{
+	position:fixed;
+	left:0;
+	top:0;
+	right:0;
+	z-index:3;
+	padding:0 3%;
+	margin:0 auto;
+	width:100%;
+	max-width:640px;
+	height:auto;
+	.top{
+		height:44px;
+		@include display(flex);
+	 	@include align-items(center);
+	 	.left{
+	 		width:10%;
+	 	}
+	 	h1{
+	 		width:80%;
+	 		font:.8rem/40px $publicFont;
+	 		color:#333;
+	 		text-align:center;
+	 	}
+	}
+	.orders-status{
+		position:relative;
+		padding:5% 0;
+		background-color:#fff;
+		border-radius:5px;
+		box-shadow: 0 3px 5px #e4e4e4;
+		ul{
+			@include display(flex);
+		 	@include align-items(center);
+		 	li{
+		 		@include box-flex(1);
+		 		font:.7rem/1.5 $publicFont;
+	 			color:#999;
+		 		text-align:center;
+		 	}
+		 	li.active{
+		 		color:#da004c;
+		 	}
+		}
+		.line{
+			position:absolute;
+			left:5%;
+			bottom:2px;
+			width:15%;
+			height:2px;
+			background-color:#da004c;
+			border-radius:5px;
+			@include transition(all .5s);
+		}
+	}
+}
+.user-orders-content{
+	padding:3%;
+	.items{
+		padding:5%;
+		margin-bottom:5%;
+		background-color:#fff;
+		border-radius:10px;
+		box-shadow: 0 3px 5px #e4e4e4;
+		.items-top{
+			margin-bottom:.5rem;
+			@include display(flex);
+		 	@include align-items(center);
+		 	@include justify-content(space-between);
+		 	h2{
+		 		width:70%;
+				font:.75rem/1.5 $publicFont;
+	 			color:#000;
+ 			    overflow: hidden;
+			    text-overflow: ellipsis;
+			    white-space: nowrap;
+		 	}
+		 	span{
+				font:.65rem/1.5 $publicFont;
+	 			color:#999;
+		 	}
+		}
+		>p{
+			font:.65rem/1.5 $publicFont;
+ 			color:#666;
+ 			span{
+ 				margin-left:.5rem;
+ 			}
+		}
+		.items-foot{
+			margin-top:.5rem;
+			@include display(flex);
+		 	@include align-items(center);
+		 	@include justify-content(space-between);
+		 	span{
+				font:.6rem/1.5 $publicFont;
+ 				color:#da004c;
+ 				strong{
+ 					font:bold .9rem/1.5 $publicFont;
+ 				}
+		 	}
+		 	a{
+		 		padding:.5% 5%;
+				font:.7rem/1.5 $publicFont;
+	 			border-radius:30px;
+		 	}
+		 	a.active{
+				background-color:#da004c;
+				color:#fff;
+				background: -webkit-linear-gradient(right top, #da024d , #d9256c); /* Safari 5.1 - 6.0 */
+				background: linear-gradient(to right top, #d9256c , #da024d); /* 标准的语法 */
+			    box-shadow: 1px 2px 5px #e589a6;
+		 	}
+		 	a.on{	
+				border:1px solid;
+				color:#da004c;
+		 	}
+		}
+	}
+}

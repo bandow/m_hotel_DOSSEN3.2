@@ -1,0 +1,480 @@
+@charset "UTF-8";
+/* =================================================================
+* Reset Style for Mobile
+* Author:雪丘行||Bandow
+* Author URI:http://www.unll123.com/
+* Date:2017-09-08
+* Version:0.0.2
+* ================================================================== */
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC","Helvetica Neue",STHeiti,"Microsoft Yahei",Tahoma,Simsun,sans-serif;
+  /*-webkit-text-size-adjust是解决 iPhone 横屏时默认会放大文字的问题*/
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  /*取消掉300ms的延迟，chrome和safari可以生效*/
+  touch-action: manipulation;
+}
+
+html, body {
+  /*-webkit-user-select:none禁止用户进行复制.选择.*/
+  -webkit-user-select: none;
+  user-select: none;
+  width: 100%;
+  /*使用min-height:100%代替height：100%*/
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  /*弹性滚动-局部滚动开启弹性滚动：将属性挂在body上，可以避免很多奇怪的bug。*/
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, div, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  /*把所有元素的内边距和边框不再会增加它的宽度*/
+  -moz-box-sizing: border-box;
+  /* Firefox */
+  -webkit-box-sizing: border-box;
+  /* Safari */
+  box-sizing: border-box;
+}
+
+ol, ul {
+  /*去掉列表点*/
+  list-style: none;
+}
+
+table {
+  /*去掉表格的双行线*/
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*取消a标签在移动端点击时的背景颜色*/
+a, a:hover, a:active, a:visited, a:link, a:focus {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  background: none;
+  text-decoration: none;
+}
+
+a, img {
+  /* 禁止长按链接与图片弹出菜单 */
+  -webkit-touch-callout: none;
+}
+
+input {
+  /*ios去除input默认样式*/
+  -webkit-appearance: none;
+}
+
+/* =================================================================
+* Reset Style for Mobile
+* Author:雪丘行||Bandow
+* Author URI:http://www.unll123.com/
+* Date:2017-09-08
+* Version:0.0.2
+* ================================================================== */
+html {
+  font-size: 18px;
+}
+
+@media (min-device-width: 320px) {
+  html {
+    font-size: 18px;
+  }
+}
+@media (min-device-width: 360px) {
+  html {
+    font-size: 20.25px;
+  }
+}
+@media (min-device-width: 375px) {
+  html {
+    font-size: 21.1px;
+  }
+}
+@media (min-device-width: 384px) {
+  html {
+    font-size: 21.6px;
+  }
+}
+@media (min-device-width: 400px) {
+  html {
+    font-size: 22.5px;
+  }
+}
+@media (min-device-width: 412px) {
+  html {
+    font-size: 23.17px;
+  }
+}
+@media (min-device-width: 414px) {
+  html {
+    font-size: 23.3px;
+  }
+}
+@media (min-device-width: 480px) {
+  html {
+    font-size: 26.99px;
+  }
+}
+@media (min-device-width: 533px) {
+  html {
+    font-size: 29.98px;
+  }
+}
+@media (min-device-width: 568px) {
+  html {
+    font-size: 31.95px;
+  }
+}
+@media (min-device-width: 600px) {
+  html {
+    font-size: 33.74px;
+  }
+}
+@media (min-device-width: 640px) {
+  html {
+    font-size: 24px;
+  }
+}
+.wrapper {
+  width: 100%;
+  max-width: 640px;
+  min-height: 100%;
+  height: auto;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #f7f7f7;
+}
+
+.dossen-header-left {
+  position: relative;
+}
+.dossen-header-left:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 3px;
+  width: 10px;
+  height: 10px;
+  border: 1px solid;
+  border-bottom: 0;
+  border-right: 0;
+  margin-top: -5px;
+  color: #333;
+  -webkit-transform: rotateZ(-45deg);
+  transform: rotateZ(-45deg);
+}
+
+.dossen-arrow-bottom {
+  position: relative;
+}
+.dossen-arrow-bottom:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 3px;
+  width: 10px;
+  height: 10px;
+  border: 1px solid;
+  border-bottom: 0;
+  border-right: 0;
+  margin-top: -5px;
+  color: #333;
+  -webkit-transform: rotateZ(-135deg);
+  transform: rotateZ(-135deg);
+}
+
+.dossen-arrow {
+  position: relative;
+}
+.dossen-arrow:after {
+  content: ' ';
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  width: 8px;
+  height: 8px;
+  border: 1px solid;
+  border-bottom: 0;
+  border-right: 0;
+  margin-top: -4px;
+  color: #ccc;
+  -webkit-transform: rotateZ(135deg);
+  transform: rotateZ(135deg);
+}
+
+.dossen-pr {
+  padding-right: 5%;
+}
+
+.orders-detail-wrapper {
+  background-color: #f7f7f7;
+  padding-bottom: 44px;
+}
+
+.orders-detail-header {
+  padding: 0 3%;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+}
+.orders-detail-header .top {
+  height: 44px;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.orders-detail-header .top .left {
+  width: 10%;
+}
+.orders-detail-header .top h1 {
+  width: 80%;
+  font: 0.8rem/40px -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+  color: #333;
+  text-align: center;
+}
+.orders-detail-header .orders-detail-text {
+  padding: 3% 1% 10% 1%;
+}
+.orders-detail-header .orders-detail-text h2 {
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.orders-detail-header .orders-detail-text h2 i {
+  margin-right: .5rem;
+  width: 30px;
+  height: 30px;
+  font-size: 0;
+}
+.orders-detail-header .orders-detail-text h2 i img {
+  width: 100%;
+  height: 100%;
+}
+.orders-detail-header .orders-detail-text h2 span {
+  font: bold 1rem/1.5 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+  color: #da004c;
+}
+.orders-detail-header .orders-detail-text p {
+  font: 0.75rem/2 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+  color: #333;
+}
+
+.orders-detail-content .content-top {
+  padding: 3% 3% 0 3%;
+  background-color: #fff;
+}
+.orders-detail-content .content-top .text {
+  padding-bottom: 3%;
+  border-bottom: 1px solid #eee;
+}
+.orders-detail-content .content-top .text h3 {
+  font: 0.8rem/1.5 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+  color: #333;
+}
+.orders-detail-content .content-top .text p {
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.orders-detail-content .content-top .text p i {
+  margin-right: .4rem;
+  width: 14px;
+  height: auto;
+  font-size: 0;
+}
+.orders-detail-content .content-top .text p i img {
+  width: 100%;
+}
+.orders-detail-content .content-top .text p span {
+  font: 0.7rem/1.5 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+  color: #999;
+}
+.orders-detail-content .content-top .text.dossen-arrow:after {
+  right: 1%;
+}
+.orders-detail-content .content-top .list {
+  padding: 5% 0;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+}
+.orders-detail-content .content-top .list a {
+  -moz-box-flex: 1;
+  -webkit-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+}
+.orders-detail-content .content-top .list a i {
+  margin-right: .3rem;
+  width: 20px;
+  height: auto;
+  font-size: 0;
+}
+.orders-detail-content .content-top .list a i img {
+  width: 100%;
+}
+.orders-detail-content .content-top .list a span {
+  font: 0.7rem/1.5 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+  color: #666;
+}
+.orders-detail-content .content-detail, .orders-detail-content .content-orders {
+  margin-top: .5rem;
+  padding: 3%;
+  background-color: #fff;
+}
+.orders-detail-content .content-detail p, .orders-detail-content .content-orders p {
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.orders-detail-content .content-detail p span, .orders-detail-content .content-orders p span {
+  font: 0.7rem/2 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+  color: #666;
+}
+.orders-detail-content .content-detail p span:first-child, .orders-detail-content .content-orders p span:first-child {
+  color: #999;
+  width: 5rem;
+}
+.orders-detail-content .content-detail p span:last-child, .orders-detail-content .content-orders p span:last-child {
+  color: #666;
+}
+.orders-detail-content .content-detail p span:last-child span, .orders-detail-content .content-orders p span:last-child span {
+  margin-left: .3rem;
+}
+.orders-detail-content .content-detail p .w2, .orders-detail-content .content-orders p .w2 {
+  letter-spacing: 1.4rem;
+}
+.orders-detail-content .content-detail p .w3, .orders-detail-content .content-orders p .w3 {
+  letter-spacing: .35rem;
+}
+.orders-detail-content .hotel-service {
+  margin-top: .5rem;
+  padding: 3% 3% 0 3%;
+  background-color: #fff;
+}
+.orders-detail-content .hotel-service h2 {
+  padding-bottom: 3%;
+  font: 0.8rem/2 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+  color: #000;
+}
+.orders-detail-content .hotel-service .items {
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  border-top: 1px solid #eee;
+  padding: 5% 0;
+}
+.orders-detail-content .hotel-service .items .img {
+  margin-right: .5rem;
+  width: 20px;
+  font-size: 0;
+}
+.orders-detail-content .hotel-service .items .img img {
+  width: 100%;
+}
+.orders-detail-content .hotel-service .items .text h3 {
+  font: 0.8rem/1.2 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+  color: #333;
+}
+.orders-detail-content .hotel-service .items .text p {
+  font: 0.7rem/2 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+  color: #999;
+}
+.orders-detail-content .hotel-service .items.dossen-arrow:after {
+  right: 1%;
+}
+.orders-detail-content .content-prompt {
+  margin-top: .5rem;
+  padding: 3%;
+}
+.orders-detail-content .content-prompt p {
+  font: 0.7rem/1.5 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+  color: #999;
+}
+
+.orders-detail-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 3;
+  padding: 0 3%;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 640px;
+  height: 44px;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  box-shadow: 0px -5px 10px #ececec;
+  background-color: #fff;
+}
+.orders-detail-footer a {
+  margin: 0 3%;
+  -moz-box-flex: 1;
+  -webkit-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  font: 0.7rem/2.2 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+  border-radius: 30px;
+  text-align: center;
+}
+.orders-detail-footer .see {
+  color: #d91d65;
+  border: 1px solid #d91d65;
+}
+.orders-detail-footer .book {
+  color: #fff;
+  background-color: #d91d65;
+}
+
+/*# sourceMappingURL=ordersDetail.css.map */
