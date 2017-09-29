@@ -318,6 +318,11 @@ html {
 .orders-detail-content .content-top .text p span {
   font: 0.7rem/1.5 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
   color: #999;
+  -moz-box-flex: 1;
+  -webkit-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
 }
 .orders-detail-content .content-top .text.dossen-arrow:after {
   right: 1%;

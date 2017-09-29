@@ -1,0 +1,160 @@
+{
+"requestid": "841af2a2abbd4b4bb8321c83eb164708",
+"errcode": 0,
+"errmsg": "ok",
+"data": {
+	"Orders": [{
+		"OrderId": "R0020022170906000005",
+		"HotelId": "0020022",
+		"Hotel": {
+			"HotelId": "0020022",
+			"Name": "广州火车站三元里地铁站店",
+			"CityCode": "22",
+			"CityName": null,
+			"Telephone": "020-66624008",
+			"Address": "广州市越秀区三元里大道447号（近卜蜂莲花超市、三元里地铁站C2出口前行100米）",
+			"MapPoints": [{
+					"MapType": "T",
+					"Longitude": "113.26114",
+					"Latitude": "23.167876"
+				}, {
+					"MapType": "B",
+					"Longitude": "113.26114",
+					"Latitude": "23.167876"
+				}
+			],
+			"LowestPrice": 213,
+			"Status": "OPEN",
+			"SatisfyRate": "1",
+			"Grade": {
+				"Rate": 0,
+				"Desc": ""
+			},
+			"WifiPwd": "4007007899",
+			"BrandCode": "csbj",
+			"CommentNum": 14,
+			"BusinessArea": "矿泉/三元里/机场路",
+			"RankPoint": 0,
+			"BreakFast": true,
+			"FreeWifi": true,
+			"Packing": false,
+			"Description": "",
+			"Pictures": [{
+					"IsMain": true,
+					"Type": "WG",
+					"PictureUrl": "/image/Hotel/1be8eb1688374d1b9147b8210a2734a1_mid.jpg",
+					"ThumbnailUrl": "/image/Hotel/1be8eb1688374d1b9147b8210a2734a1_mid.jpg"
+				}, {
+					"IsMain": true,
+					"Type": "其他",
+					"PictureUrl": "/image/Hotel/3b8767eeea5f43668fb8a2fa1cebe287_big.jpg",
+					"ThumbnailUrl": "/image/Hotel/3b8767eeea5f43668fb8a2fa1cebe287_big.jpg"
+				}, {
+					"IsMain": true,
+					"Type": "其他",
+					"PictureUrl": "/image/Hotel/879c0347dbcf4e5fb3c43bd009b0523c_big.jpg",
+					"ThumbnailUrl": "/image/Hotel/879c0347dbcf4e5fb3c43bd009b0523c_big.jpg"
+				}, {
+					"IsMain": true,
+					"Type": "其他",
+					"PictureUrl": "/image/Hotel/d649d658655e42448b1d0e441cd5287b_big.jpg",
+					"ThumbnailUrl": "/image/Hotel/d649d658655e42448b1d0e441cd5287b_big.jpg"
+				}, {
+					"IsMain": true,
+					"Type": "其他",
+					"PictureUrl": "/image/hotel/6d49409afb5b48fa9492515321f4f8ee.jpg",
+					"ThumbnailUrl": "/image/hotel/6d49409afb5b48fa9492515321f4f8ee.jpg"
+				}, {
+					"IsMain": true,
+					"Type": "其他",
+					"PictureUrl": "/image/Hotel/6c3e298ec5334cd68be39ff572e8999e_big.jpg",
+					"ThumbnailUrl": "/image/Hotel/6c3e298ec5334cd68be39ff572e8999e_big.jpg"
+				}
+			],
+			"HotelFacilities": null,
+			"RoomFacilities": null,
+			"HotelTraffics": null,
+			"HotelPolicy": null,
+			"Memo": "大堂电脑|休闲书吧|免费WIFI|自助洗衣房|自助营养早餐厅|支持刷卡|内有电梯",
+			"Distance": 0,
+			"HotelRoomTypes": null,
+			"Tags": [{
+					"Key": "新店特惠",
+					"Value": null,
+					"Tips": null,
+					"Class": "LABEL_CYAN",
+					"HoverIcon": null,
+					"Icon": null,
+					"IsNew": false,
+					"Desc": null,
+					"Url": null
+				}
+			],
+			"IsFavorite": false,
+			"IsInvoice": true,
+			"QualityScore": 0,
+			"IsCanRefundOnline": true
+		},
+		"RoomTypeId": "TD",
+		"RoomTypeName": "特惠大床房",
+		"RoomTypePic": "http://211.97.0.116:8079/StaticFile/image/Hotel/d0d5a23db47540c09cd6f297b61108a5_small.jpg",
+		"CheckInType": "NS",
+		"CheckInDate": "2017-10-03 00:00:00",
+		"CheckOutDate": "2017-10-05 00:00:00",
+		"numDay": 2,
+		"CRSorOther": "72",
+		"BookType": null,
+		"Status": "RESERVATION",
+		"BookingNum": 1,
+		"TotalFee": 388,
+		"Coupon": 0,
+		"IsPay": false,
+		"PayTime": null,
+		"CreateTime": "2017-09-06 18:40:53",
+		"ModifyTime": "2017-09-06 18:40:53",
+		"ActivityCode": "",
+		"ExchangePoint": "0",
+		"GuestName": "邓小文",
+		"Telephone": "15102083192",
+		"MemberNo": "V9000000225",
+		"KeepTime": "2017-10-03 20:00:00",
+		"Events": [{
+				"Key": "立即支付",
+				"Value": "RESERVATION_PAY",
+				"Tips": null,
+				"Class": "BUTTON_RED",
+				"HoverIcon": null,
+				"Icon": null,
+				"IsNew": false,
+				"Desc": null,
+				"Url": null
+			}, {
+				"Key": "取消订单",
+				"Value": "RESERVATION_CANCEL",
+				"Tips": null,
+				"Class": "LABEL_GREY",
+				"HoverIcon": null,
+				"Icon": null,
+				"IsNew": false,
+				"Desc": null,
+				"Url": null
+			}
+		],
+		"Tags": [{
+				"Key": "留房20:00",
+				"Value": "KEEP_TIME",
+				"Class": "LABEL_CYAN"
+			}
+		],
+		"CurrentTime": "2017-09-29 10:00:30",
+		"Invoice": null,
+		"CanModifyInvoice": true,
+		"NeedPrepay": null,
+		"RoomNO": null
+	}],
+	"Page": 0,
+	"Rows": 15,
+	"Total": 1,
+	"Extendsions": null
+	}
+}

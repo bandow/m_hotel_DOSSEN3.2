@@ -32,7 +32,7 @@
 		</div>
 	</header>
 	<div class="user-orders-content">
-		<div class="items">
+		<!-- <div class="items">
 			<div class="items-top">
 				<h2>宜尚酒店广州客村地铁站琶洲宜尚酒店广州客村地铁站琶洲</h2>
 				<span>待付款</span>
@@ -41,57 +41,9 @@
 			<p>房型：商务大床房</p>
 			<div class="items-foot">
 				<span>￥<strong>462</strong></span>
-				<a class="active" href="javascript:;">去支付</a>
+				<a class="on" href="javascript:;">去支付</a>
 			</div>
-		</div>
-		<div class="items">
-			<div class="items-top">
-				<h2>宜尚酒店广州客村地铁站琶洲宜尚酒店广州客村地铁站琶洲</h2>
-				<span>待付款</span>
-			</div>
-			<p>时间：09-11至09-12<span>住1晚/2间</span></p>
-			<p>房型：商务大床房</p>
-			<div class="items-foot">
-				<span>￥<strong>462</strong></span>
-				<a class="active" href="javascript:;">去支付</a>
-			</div>
-		</div>
-		<div class="items">
-			<div class="items-top">
-				<h2>宜尚酒店广州客村地铁站琶洲宜尚酒店广州客村地铁站琶洲</h2>
-				<span>待付款</span>
-			</div>
-			<p>时间：09-11至09-12<span>住1晚/2间</span></p>
-			<p>房型：商务大床房</p>
-			<div class="items-foot">
-				<span>￥<strong>462</strong></span>
-				<a class="active" href="javascript:;">去支付</a>
-			</div>
-		</div>
-		<div class="items">
-			<div class="items-top">
-				<h2>宜尚酒店广州客村地铁站琶洲宜尚酒店广州客村地铁站琶洲</h2>
-				<span>待付款</span>
-			</div>
-			<p>时间：09-11至09-12<span>住1晚/2间</span></p>
-			<p>房型：商务大床房</p>
-			<div class="items-foot">
-				<span>￥<strong>462</strong></span>
-				<a class="active" href="javascript:;">去支付</a>
-			</div>
-		</div>
-		<div class="items">
-			<div class="items-top">
-				<h2>宜尚酒店广州客村地铁站琶洲宜尚酒店广州客村地铁站琶洲</h2>
-				<span>待付款</span>
-			</div>
-			<p>时间：09-11至09-12<span>住1晚/2间</span></p>
-			<p>房型：商务大床房</p>
-			<div class="items-foot">
-				<span>￥<strong>462</strong></span>
-				<a class="active" href="javascript:;">去支付</a>
-			</div>
-		</div>
+		</div> -->
 	</div>
 </div>
 <!-- script begin -->
@@ -103,35 +55,75 @@ $(document).ready(function($){
 	//状态列表切换
 	$(".orders-status ul li").each(function(index,el){
 		$(this).on("click",function(){
-			$(this).addClass('active').siblings().removeClass('active');
-			console.log(index);
+			$(this).attr("data-id",index).addClass('active').siblings().removeClass('active');
+			//console.log(index);
+			$(".user-orders-content .items").hide();
+			if(index==0){
+				$(".user-orders-content .items").show();
+			}else if(index==1){		
+				$('.user-orders-content .items[data-type="RESERVATION"]').show();
+			}else if(index==2){
+				$('.user-orders-content .items[data-type="CHECKOUT"]').show();
+			}else if(index==3){
+				$('.user-orders-content .items[data-type="NOWSHOW"]').show();
+			}
 			$(".line").css("left",5+25*index+"%");
 		});
 	});
 	$.ajax({
-		url:'http://10.44.61.27/m_hotel_DOSSEN3.2/data/Hotel.json',
+		url:'http://10.44.61.27/m_hotel_DOSSEN3.2/data/orders.json',
 		type:'GET',
 		dataType:'json',
 		data:{},
 		success:function(result){
-			var hotelText=$(".hotel-text");
-			var hotelContent='';
-			var hotelInfo=result.data.Orders[0];
-			var time=new Date(hotelInfo.CheckOutDate).getTime()-new Date(hotelInfo.CheckInDate).getTime();
-			var day= time/ 1000 / 60 / 60 / 24;
-			//console.log(hotelInfo);
-			if(result.data.Orders != null && result.data.Orders.length > 0){
-				hotelContent+='<p>酒店名称：<span>'+hotelInfo.Hotel.Name+'</span></p>';
-				hotelContent+='<p>入住时间：<span>'+hotelInfo.CheckInDate.replace(/00:00:00/, "")+'</span></p>';
-				hotelContent+='<p>离店时间：<span>'+hotelInfo.CheckOutDate.replace(/00:00:00/, "")+'</span><span>住'+day+'晚</span></p>';
+			var userOrdersContent=$(".user-orders-content");
+			var ordersHtml='';
+			var ordersList=result.data.Orders;
+			if(ordersList != null && ordersList.length > 0){
+				for(var i=0;ordersList.length>i;i++){
+					var time=new Date(ordersList[i].CheckOutDate).getTime()-new Date(ordersList[i].CheckInDate).getTime();
+					var day= time/ 1000 / 60 / 60 / 24;
+					ordersHtml+='<div class="items" data-type="'+ordersList[i].Status+'">';
+					ordersHtml+='<div class="items-top">';
+					ordersHtml+='<h2>'+ordersList[i].Hotel.Name+'</h2>';
+					if(ordersList[i].Status=="RESERVATION"){
+						ordersHtml+='<span class="is-color">待付款</span>';
+					}else if(ordersList[i].Status=="CHECKOUT"){
+						ordersHtml+='<span class="is-color">待点评</span>';
+					}else if(ordersList[i].Status=="CHECKIN"){
+						ordersHtml+='<span>订单完成</span>';
+					}else if(ordersList[i].Status=="CANCEL"){
+						ordersHtml+='<span>已取消</span>';
+					}else if(ordersList[i].Status=="NOWSHOW"){
+						ordersHtml+='<span class="is-color">入住中</span>';
+					}
+					ordersHtml+='</div>';
+					ordersHtml+='<p>时间：'+timeConversion(ordersList[i].CheckInDate)+'至'+timeConversion(ordersList[i].CheckOutDate)+'<span>住'+day+'晚/'+ordersList[i].BookingNum+'间</span></p>';
+					ordersHtml+='<p>房型：'+ordersList[i].RoomTypeName+'</p>';
+					ordersHtml+='<div class="items-foot">';
+					ordersHtml+='<span>￥<strong>'+ordersList[i].TotalFee*ordersList[i].BookingNum*day+'</strong></span>';
+					for(var j=0;ordersList[i].Events.length>j;j++){
+						if(ordersList[i].Events[j].Value=="RESERVATION_PAY"){
+							ordersHtml+='<a class="active" href="javascript:;">去支付</a>';
+						}else if(ordersList[i].Events[j].Value=="RESERVATION_CANCEL"){
+							ordersHtml+='<a class="on" href="javascript:;">取消订单</a>';
+						}
+					}		
+					ordersHtml+='</div>';
+					ordersHtml+='</div>';
+				}
 			}
-			hotelText.append(hotelContent);
+			userOrdersContent.append(ordersHtml);
 		},
 		error:function(){
 			console.log('error');
 		}
 	})
 });
+//截取时间显示方法
+function timeConversion(str){  
+    return str.substring(5,10);  
+}
 </script>
 <!-- script end -->
 </body>

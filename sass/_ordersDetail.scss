@@ -74,6 +74,7 @@
 	 			span{
 	 				font:.7rem/1.5 $publicFont;
 	 				color:#999;
+	 				@include box-flex(1);
 	 			}
 			}
 		}

@@ -339,6 +339,9 @@ html {
   font: 0.65rem/1.5 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
   color: #999;
 }
+.user-orders-content .items .items-top span.is-color {
+  color: #da004c;
+}
 .user-orders-content .items > p {
   font: 0.65rem/1.5 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
   color: #666;

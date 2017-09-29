@@ -28,7 +28,7 @@
 	</header>
 	<div class="orders-detail-content">
 		<div class="content-top">
-			<div class="text dossen-arrow">
+			<!-- <div class="text dossen-arrow">
 				<h3>城市便捷酒店-广州白云山店</h3>
 				<p><i><img src="images/orders_datail_address_icon.png" alt=""></i><span>广州白云山大金钟路63号</span></p>
 			</div>
@@ -36,14 +36,14 @@
 				<a href="tel:13719238899;"><i><img src="images/orders_datail_phone_icon.png" alt=""></i><span>联系酒店</span></a>
 				<a href="#"><i><img src="images/orders_datail_navigation_icon.png" alt=""></i><span>地图导航</span></a>
 				<a href="tel:40012123;"><i><img src="images/orders_datail_contact_icon.png" alt=""></i><span>联系客服</span></a>
-			</div>
+			</div> -->
 		</div>
 		<div class="content-detail">
-			<p><span class="w2">房型</span><span>特惠大床房<span>1晚/2间</span></span></p>
+			<!-- <p><span class="w2">房型</span><span>特惠大床房<span>1晚/2间</span></span></p>
 			<p><span>入住时间</span><span>2017-09-17至2017-09-18</span></p>
 			<p><span class="w3">入住人</span><span>麦大肥</span></p>
 			<p><span>入住电话</span><span>15900000000</span></p>
-			<p><span>订单价格</span><span>¥169</span></p>
+			<p><span>订单价格</span><span>¥169</span></p> -->
 		</div>
 		<div class="hotel-service">
 			<h2>云酒店服务</h2>
@@ -63,8 +63,8 @@
 			</a>
 		</div>
 		<div class="content-orders">
-			<p><span>订单编号</span><span>R0020059170808000024</span></p>
-			<p><span>下单日期</span><span>2017-09-16<span>18:20</span></span></p>
+			<!-- <p><span>订单编号</span><span>R0020059170808000024</span></p>
+			<p><span>下单日期</span><span>2017-09-16<span>18:20</span></span></p> -->
 		</div>
 		<div class="content-prompt">
 			<p>温馨提示</p>
@@ -83,23 +83,46 @@
 <script>
 $(document).ready(function($){
 	$.ajax({
-		url:'http://10.44.61.27/m_hotel_DOSSEN3.2/data/Hotel.json',
+		url:'http://10.44.61.27/m_hotel_DOSSEN3.2/data/ordersDetail.json',
 		type:'GET',
 		dataType:'json',
 		data:{},
 		success:function(result){
-			var hotelText=$(".hotel-text");
-			var hotelContent='';
-			var hotelInfo=result.data.Orders[0];
-			var time=new Date(hotelInfo.CheckOutDate).getTime()-new Date(hotelInfo.CheckInDate).getTime();
+			var ordersDetailData=result.data.Orders[0];
+			var contentTop=$(".content-top");
+			var contentDetail=$(".content-detail");
+			var contentOrders=$(".content-orders");
+			var contentTopHtml='';
+			var contentDetailHtml='';
+			var contentOrdersHtml='';
+			var time=new Date(ordersDetailData.CheckOutDate).getTime()-new Date(ordersDetailData.CheckInDate).getTime();
 			var day= time/ 1000 / 60 / 60 / 24;
-			//console.log(hotelInfo);
+
+			console.log(ordersDetailData);
 			if(result.data.Orders != null && result.data.Orders.length > 0){
-				hotelContent+='<p>酒店名称：<span>'+hotelInfo.Hotel.Name+'</span></p>';
-				hotelContent+='<p>入住时间：<span>'+hotelInfo.CheckInDate.replace(/00:00:00/, "")+'</span></p>';
-				hotelContent+='<p>离店时间：<span>'+hotelInfo.CheckOutDate.replace(/00:00:00/, "")+'</span><span>住'+day+'晚</span></p>';
+				contentTopHtml+='<div class="text dossen-arrow">';
+				contentTopHtml+='<h3>'+ordersDetailData.Hotel.Name+'</h3>';
+				contentTopHtml+='<p><i><img src="images/orders_datail_address_icon.png" alt=""></i><span>'+ordersDetailData.Hotel.Address+'</span></p>';
+				contentTopHtml+='</div>';
+				contentTopHtml+='<div class="list">';
+				contentTopHtml+='<a href="tel:'+ordersDetailData.Hotel.Telephone+';"><i><img src="images/orders_datail_phone_icon.png" alt=""></i><span>联系酒店</span></a>';
+				contentTopHtml+='<a href="#"><i><img src="images/orders_datail_navigation_icon.png" alt=""></i><span>地图导航</span></a>';
+				contentTopHtml+='<a href="tel:'+ordersDetailData.Hotel.WifiPwd+';"><i><img src="images/orders_datail_contact_icon.png" alt=""></i><span>联系客服</span></a>';
+				contentTopHtml+='</div>';
+
+				contentDetailHtml+='<p><span class="w2">房型</span><span>'+ordersDetailData.RoomTypeName+'<span>'+day+'晚/'+ordersDetailData.BookingNum+'间</span></span></p>';
+				contentDetailHtml+='<p><span>入住时间</span><span>'+ordersDetailData.CheckInDate.replace(/00:00:00/, "")+'至'+ordersDetailData.CheckOutDate.replace(/00:00:00/, "")+'</span></p>';
+				contentDetailHtml+='<p><span class="w3">入住人</span><span>'+ordersDetailData.GuestName+'</span></p>';
+				contentDetailHtml+='<p><span>入住电话</span><span>'+ordersDetailData.Telephone+'</span></p>';
+				contentDetailHtml+='<p><span>订单价格</span><span>¥'+ordersDetailData.TotalFee*day*ordersDetailData.BookingNum+'</span></p>';
+
+				contentOrdersHtml+='<p><span>订单编号</span><span>'+ordersDetailData.OrderId+'</span></p>';
+				contentOrdersHtml+='<p><span>下单日期</span><span>'+ordersDetailData.KeepTime+'</span></p>';
 			}
-			hotelText.append(hotelContent);
+
+			contentTop.append(contentTopHtml);
+			contentDetail.append(contentDetailHtml);
+			contentOrders.append(contentOrdersHtml);
 		},
 		error:function(){
 			console.log('error');
