@@ -232,3 +232,96 @@
  		}
 	}
 }
+.mask{
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	z-index:3;
+	display:none;
+	background-color:#000;
+	opacity:.5;
+}
+.register-success{
+	position:fixed;
+	top:50%;
+	left:50%;
+	z-index:4;
+	display:none;
+	padding:2%;
+	background-color:#ec5941;
+	width:80%;
+	height:auto;
+	border-radius:5px;
+	@include transform(translate3d(-50%,-50%,0));
+}
+.register-success-content{
+	padding:4% 3%;
+	border:1px solid #ffa1c1;
+	border-radius:5px;
+	.title{
+		margin:0 auto .2rem;
+		width:60%;
+		font-size:0;
+		img{
+			width:100%;
+		}
+	}
+	>p{
+		font:.55rem/1.5 $publicFont;
+		color:#fff;
+		text-align:center;
+	}
+	.regiter-coupon{
+		.items{
+			margin:.5rem auto 0;
+			width:86%;
+			border-radius:5px;
+			@include display(flex);
+			@include align-items(center);
+			.left{
+				padding:3% 0 3% 5%;
+				border-right:1px dashed #ccc;
+				@include box-flex(2.8);
+				h3{
+					font:.6rem/1.5 $publicFont;
+					color:#f3ab00;
+					span{
+						margin-right:.3rem;
+						strong{
+							font-size:1.1rem;
+							font-weight:bold;
+						}
+					}
+				}
+				p{
+					font:.6rem/2 $publicFont;
+					color:#999;
+				}
+			}
+			.right{
+				@include box-flex(1);
+				font:.65rem/1.5 $publicFont;
+				color:#666;
+				text-align:center;
+			}
+		}
+	}
+	.register-success-btn{
+		margin:1rem auto 0;
+		width:50%;
+		background:#f3d300;
+		background: -webkit-linear-gradient(left, #f3d300 , #ff9700); /* Safari 5.1 - 6.0 */
+		background: linear-gradient(to left, #ff9700 , #f3d300); /* 标准的语法 */
+		border-radius:30px;
+		box-shadow:3px 3px 6px #e43e34;
+		font-size:0;
+		a{
+			display:block;
+			font:.75rem/2rem $publicFont;
+			text-align:center;
+			color:#fff;
+		}
+	}
+}

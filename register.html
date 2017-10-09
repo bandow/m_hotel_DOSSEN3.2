@@ -55,6 +55,48 @@
 			<p>阅读并接受<a href="">用户服务条款</a></p>
 		</div>
 	</div>
+	<!-- 笼罩层 begin -->
+	<div class="mask"></div>
+	<!-- 笼罩层 end -->
+	<!-- 注册成功弹出框 begin -->
+	<div class="register-success">
+		<div class="register-success-content">
+			<div class="title"><img src="images/register_title.png" alt=""></div>
+			<p>已赠送350元优惠券大礼包，立即去预订酒店吧！</p>
+			<div class="regiter-coupon">
+				<div class="items" style="background:url(images/coupon_bg.png) #fff top right no-repeat;background-size:auto 100%;">
+					<div class="left">
+						<h3><span><strong>50</strong>元</span>优惠券</h3>
+						<p>使用范围：部分品牌可用</p>
+					</div>
+					<div class="right">4张</div>
+				</div>
+				<div class="items" style="background:url(images/coupon_bg.png) #fff top right no-repeat;background-size:auto 100%;">
+					<div class="left">
+						<h3><span><strong>30</strong>元</span>优惠券</h3>
+						<p>使用范围：部分品牌可用</p>
+					</div>
+					<div class="right">1张</div>
+				</div>
+				<div class="items" style="background:url(images/coupon_bg.png) #fff top right no-repeat;background-size:auto 100%;">
+					<div class="left">
+						<h3><span><strong>30</strong>元</span>优惠券</h3>
+						<p>使用范围：部分品牌可用</p>
+					</div>
+					<div class="right">1张</div>
+				</div>
+				<div class="items" style="background:url(images/coupon_bg.png) #fff top right no-repeat;background-size:auto 100%;">
+					<div class="left">
+						<h3><span><strong>30</strong>元</span>优惠券</h3>
+						<p>使用范围：部分品牌可用</p>
+					</div>
+					<div class="right">1张</div>
+				</div>
+			</div>
+			<div class="register-success-btn"><a href="javascript:;">好的</a></div>
+		</div>
+	</div>
+	<!-- 注册成功弹出框 end -->
 	<!-- script begin -->
 	<script src="scripts/jquery-3.1.1.min.js"></script>
 	<script>
@@ -186,7 +228,14 @@
 		        return false;
 		    }
 		    console.log("注册成功");
+		    $(".mask").show();
+		    $(".register-success").show();
 		}
+		//点击注册成功“好的”按钮
+		$(".register-success-btn,.mask",).on("click",function(){
+			$(".mask").hide();
+		    $(".register-success").hide();
+		})
 		//滑动验证
 		var oWidth,touches,distance;
 		var sliderBox=document.querySelector(".slider-box");

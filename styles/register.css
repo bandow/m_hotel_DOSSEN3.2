@@ -503,4 +503,115 @@ html {
   text-decoration: underline;
 }
 
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  display: none;
+  background-color: #000;
+  opacity: .5;
+}
+
+.register-success {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 4;
+  display: none;
+  padding: 2%;
+  background-color: #ec5941;
+  width: 80%;
+  height: auto;
+  border-radius: 5px;
+  -moz-transform: translate3d(-50%, -50%, 0);
+  -o-transform: translate3d(-50%, -50%, 0);
+  -ms-transform: translate3d(-50%, -50%, 0);
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.register-success-content {
+  padding: 4% 3%;
+  border: 1px solid #ffa1c1;
+  border-radius: 5px;
+}
+.register-success-content .title {
+  margin: 0 auto .2rem;
+  width: 60%;
+  font-size: 0;
+}
+.register-success-content .title img {
+  width: 100%;
+}
+.register-success-content > p {
+  font: 0.55rem/1.5 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+  color: #fff;
+  text-align: center;
+}
+.register-success-content .regiter-coupon .items {
+  margin: .5rem auto 0;
+  width: 86%;
+  border-radius: 5px;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.register-success-content .regiter-coupon .items .left {
+  padding: 3% 0 3% 5%;
+  border-right: 1px dashed #ccc;
+  -moz-box-flex: 2.8;
+  -webkit-box-flex: 2.8;
+  box-flex: 2.8;
+  -webkit-flex: 2.8;
+  flex: 2.8;
+}
+.register-success-content .regiter-coupon .items .left h3 {
+  font: 0.6rem/1.5 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+  color: #f3ab00;
+}
+.register-success-content .regiter-coupon .items .left h3 span {
+  margin-right: .3rem;
+}
+.register-success-content .regiter-coupon .items .left h3 span strong {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.register-success-content .regiter-coupon .items .left p {
+  font: 0.6rem/2 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+  color: #999;
+}
+.register-success-content .regiter-coupon .items .right {
+  -moz-box-flex: 1;
+  -webkit-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  font: 0.65rem/1.5 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+  color: #666;
+  text-align: center;
+}
+.register-success-content .register-success-btn {
+  margin: 1rem auto 0;
+  width: 50%;
+  background: #f3d300;
+  background: -webkit-linear-gradient(left, #f3d300, #ff9700);
+  /* Safari 5.1 - 6.0 */
+  background: linear-gradient(to left, #ff9700, #f3d300);
+  /* 标准的语法 */
+  border-radius: 30px;
+  box-shadow: 3px 3px 6px #e43e34;
+  font-size: 0;
+}
+.register-success-content .register-success-btn a {
+  display: block;
+  font: 0.75rem/2rem -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+  text-align: center;
+  color: #fff;
+}
+
 /*# sourceMappingURL=register.css.map */
