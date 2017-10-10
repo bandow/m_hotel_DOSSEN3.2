@@ -112,6 +112,11 @@ $(document).ready(function($){
 					ordersHtml+='</div>';
 					ordersHtml+='</div>';
 				}
+			}else{
+				ordersHtml+='<div class="empty-data">';
+				ordersHtml+='<div class="img"><img src="images/empty_orders.png" alt=""></div>';
+				ordersHtml+='<p>还没有相关的订单呢</p>';
+				ordersHtml+='</div>';
 			}
 			userOrdersContent.append(ordersHtml);
 		},

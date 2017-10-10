@@ -126,3 +126,19 @@
 		}
 	}
 }
+.empty-data{
+	margin-top:20%;
+	text-align:center;
+	.img{
+	    margin: 0 auto;
+		width:26%;
+		font-size:0;
+		img{
+			width:100%;
+		}
+	}
+	p{
+		font:.65rem/3 $publicFont;
+		color:#999;
+	}
+}

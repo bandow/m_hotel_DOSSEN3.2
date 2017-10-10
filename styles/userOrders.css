@@ -386,4 +386,21 @@ html {
   color: #da004c;
 }
 
+.empty-data {
+  margin-top: 20%;
+  text-align: center;
+}
+.empty-data .img {
+  margin: 0 auto;
+  width: 26%;
+  font-size: 0;
+}
+.empty-data .img img {
+  width: 100%;
+}
+.empty-data p {
+  font: 0.65rem/3 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+  color: #999;
+}
+
 /*# sourceMappingURL=userOrders.css.map */
